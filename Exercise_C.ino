@@ -1,9 +1,5 @@
-// =============================================
-// exercise c - knight rider led effect
-// parang scanning light effect
-// gumagalaw ang ilaw mula kaliwa papunta kanan
-// tapos babalik ulit pabalik
-// =============================================
+// apat na leds na gagamitin para sa knight rider effect
+// parang scanning light na gumagalaw mula kaliwa papunta kanan tapos babalik
 
 int led_1 = 6;
 int led_2 = 7;
@@ -12,49 +8,64 @@ int led_4 = 9;
 
 void setup() {
 
-  // lahat ng leds ay gagawing output
+  // dito sine-set ang bawat led pin bilang output
+  // kailangan ito para makapag control ang arduino kung on o off ang leds
 
-  pinMode(led_1,OUTPUT);
-  pinMode(led_2,OUTPUT);
-  pinMode(led_3,OUTPUT);
-  pinMode(led_4,OUTPUT);
+  pinMode (led_1,OUTPUT);
+  pinMode (led_2,OUTPUT);
+  pinMode (led_3,OUTPUT);
+  pinMode (led_4,OUTPUT);
 }
 
 void loop() {
 
-  // ======================
-  // forward direction
-  // ======================
+  // unang led naka on, yung iba naka off
+  // ito ang simula ng movement ng light
 
-  digitalWrite(led_1, HIGH);
-  delay(500);
-  digitalWrite(led_1, LOW);
+  digitalWrite (led_1, HIGH);
+  digitalWrite (led_2, LOW);
+  digitalWrite (led_3, LOW);
+  digitalWrite (led_4, LOW);
 
-  digitalWrite(led_2, HIGH);
-  delay(500);
-  digitalWrite(led_2, LOW);
+  // delay para makita ang movement
+  delay(1000);
 
-  digitalWrite(led_3, HIGH);
-  delay(500);
-  digitalWrite(led_3, LOW);
+  // lilipat ang ilaw sa led 2
 
-  digitalWrite(led_4, HIGH);
-  delay(500);
-  digitalWrite(led_4, LOW);
+  digitalWrite (led_1, LOW);
+  digitalWrite (led_2, HIGH);
+  digitalWrite (led_3, LOW);
+  digitalWrite (led_4, LOW);
 
-  // ======================
-  // reverse direction
-  // ======================
+  delay(1000);
 
-  digitalWrite(led_3, HIGH);
-  delay(500);
-  digitalWrite(led_3, LOW);
+  // lilipat naman sa led 3
 
-  digitalWrite(led_2, HIGH);
-  delay(500);
-  digitalWrite(led_2, LOW);
+  digitalWrite (led_3, HIGH);
+  digitalWrite (led_1, LOW);
+  digitalWrite (led_2, LOW);
+  digitalWrite (led_4, LOW);
 
-  digitalWrite(led_1, HIGH);
-  delay(500);
-  digitalWrite(led_1, LOW);
+  delay(1000);
+
+  // huling led sa kanan
+
+  digitalWrite (led_4, HIGH);
+  digitalWrite (led_1, LOW);
+  digitalWrite (led_2, LOW);
+  digitalWrite (led_3, LOW);
+
+  delay(1000);
+
+  // babalik pabalik ang ilaw
+
+  digitalWrite (led_3, HIGH);
+  digitalWrite (led_4, LOW);
+
+  delay(1000);
+
+  digitalWrite (led_2, HIGH);
+  digitalWrite (led_3, LOW);
+
+  delay(1000);
 }
