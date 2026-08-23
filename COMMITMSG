@@ -1,0 +1,7 @@
+fix: Add a button-controlled pause and resume example
+
+- examples/ButtonPauseResume/ButtonPauseResume.ino
+
+Fixes #4
+
+Signed-off-by: Vedant Madane <6527493+VedantMadane@users.noreply.github.com>
