@@ -4,8 +4,8 @@ title: "ArduinoPatterns: non-blocking LED and digital-output patterns for Arduin
 authors:
   - name: "@dev.mako (devkyato)"
     affiliation: "MATA Company"
-version: 1.0.3
-date-released: 2026-08-12
+version: 1.1.0
+date-released: 2026-08-25
 license: MIT
 repository-code: "https://github.com/devkyato/Custom-Arduino-Libraries"
 url: "https://github.com/devkyato/Custom-Arduino-Libraries"
@@ -18,7 +18,7 @@ abstract: >-
   digital-output behavior. It provides bit-mask output banks, rollover-safe
   millis()-driven animation, and independent periodic outputs without dynamic
   allocation, interrupts, external dependencies, or board-specific APIs. Six
-  examples support teaching and prototyping across Arduino Uno, ESP32, and
+  twelve examples support teaching and prototyping across Arduino Uno, ESP32, and
   RP2040 compile targets.
 keywords:
   - Arduino
@@ -36,8 +36,8 @@ preferred-citation:
   authors:
     - name: "@dev.mako (devkyato)"
       affiliation: "MATA Company"
-  version: 1.0.3
-  date-released: 2026-08-12
+  version: 1.1.0
+  date-released: 2026-08-25
   repository-code: "https://github.com/devkyato/Custom-Arduino-Libraries"
   doi: 10.5281/zenodo.21853284
   license: MIT

@@ -4,7 +4,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21853284.svg)](https://doi.org/10.5281/zenodo.21853284)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-ArduinoPatterns 1.0.3 is a focused Arduino library for coordinating LEDs and
+ArduinoPatterns 1.1.0 is a focused Arduino library for coordinating LEDs and
 other digital outputs without blocking `loop()`. It packages common teaching
 patterns into reusable components that can run alongside buttons, sensors,
 serial communication, displays, or networking.
@@ -15,8 +15,8 @@ serial communication, displays, or networking.
 - `LedAnimator`: play timed mask sequences using rollover-safe `millis()` logic.
 - `PeriodicOutput`: blink independent outputs at different rates.
 - No heap allocation, third-party dependencies, interrupts, or board-specific API.
-- Seven compile-checked examples spanning traffic lights, scanners, counters,
-  alternating masks, independent blinkers, and button pause/resume.
+- Twelve compile-checked examples spanning traffic lights, scanners, counters,
+  sensor meters, cooperative tasks, one-shot sequences, and serial selection.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Library** in Arduino IDE. In PlatformIO:
 
 ```ini
 lib_deps =
-  https://github.com/devkyato/Custom-Arduino-Libraries.git#v1.0.3
+  https://github.com/devkyato/Custom-Arduino-Libraries.git#v1.1.0
 ```
 
 To work from source, clone the repository into the Arduino `libraries` folder or
@@ -71,6 +71,11 @@ responsive.
 | [CountUpDown](examples/CountUpDown/CountUpDown.ino) | longer repeating animation tables | progression toward state-machine lessons |
 | [IndependentBlink](examples/IndependentBlink/IndependentBlink.ino) | two concurrent periodic outputs | cooperative scheduling used throughout Exercises C–F |
 | [ButtonPause](examples/ButtonPause/ButtonPause.ino) | pause and resume with `stop()` / `start()` | interactive control without blocking `loop()` |
+| [StatusBeacon](examples/StatusBeacon/StatusBeacon.ino) | compact heartbeat animation | device status without blocking application work |
+| [SerialPatternSelector](examples/SerialPatternSelector/SerialPatternSelector.ino) | switching animator instances | responsive serial control |
+| [SensorLevelMeter](examples/SensorLevelMeter/SensorLevelMeter.ino) | sampled analog display | sensor visualization with `LedBank` |
+| [CooperativeTasks](examples/CooperativeTasks/CooperativeTasks.ino) | animation plus periodic output | multiple tasks sharing one `millis()` value |
+| [OneShotSequence](examples/OneShotSequence/OneShotSequence.ino) | edge-triggered finite playback | safe one-shot interaction |
 
 These examples are maintained adaptations of concepts present in the repository's
 earlier laboratory sketches; they are not claimed as unchanged originals. Git
@@ -105,10 +110,13 @@ architectures may work but are unverified.
 
 - [API reference](docs/API.md) — ownership, lifecycle, active-low behavior, and
   rollover semantics.
+- [Wiring reference](docs/WIRING.md) — GPIO limits, drivers, and safe defaults.
+- [Practice challenges](docs/CHALLENGES.md) — bounded exercises using the stable API.
+- [Tutorials](docs/tutorials/) — guided use of the five new examples.
 - [Examples gallery](#examples-gallery) — working sketches mapped to concepts.
 - [Contributing guide](CONTRIBUTING.md) — development and test expectations.
 - [Security policy](SECURITY.md) — supported release and reporting process.
-- [Changelog](CHANGELOG.md) and [1.0.3 release notes](RELEASE_NOTES.md).
+- [Changelog](CHANGELOG.md) and [1.1.0 release notes](RELEASE_NOTES.md).
 
 ## Citation
 
@@ -116,7 +124,7 @@ If you use this software in research or teaching, cite the archived release when
 available, or use:
 
 ```text
-@dev.mako (devkyato). (2026). ArduinoPatterns: non-blocking LED and digital-output patterns for Arduino (Version 1.0.3). Zenodo. https://doi.org/10.5281/zenodo.21853284
+@dev.mako (devkyato). (2026). ArduinoPatterns: non-blocking LED and digital-output patterns for Arduino (Version 1.1.0). Zenodo. https://doi.org/10.5281/zenodo.21853284
 ```
 
 See [CITATION.cff](CITATION.cff) for machine-readable metadata.

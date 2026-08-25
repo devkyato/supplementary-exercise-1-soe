@@ -5,6 +5,19 @@ All notable changes to ArduinoPatterns are documented here. The project follows
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-25
+
+### Added
+
+- Add five compile-checked examples for status, serial selection, analog
+  metering, cooperative tasks, and one-shot playback.
+- Add matching tutorials, a GPIO wiring reference, and six practice challenges.
+
+### Changed
+
+- Expand the README example gallery and package all new teaching material in the
+  Arduino IDE release ZIP.
+
 ## [1.0.3] - 2026-08-12
 
 ### Added
@@ -55,3 +68,4 @@ All notable changes to ArduinoPatterns are documented here. The project follows
 [1.0.1]: https://github.com/devkyato/Custom-Arduino-Libraries/compare/v1.0.0...v1.0.1
 [1.0.3]: https://github.com/devkyato/Custom-Arduino-Libraries/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/devkyato/Custom-Arduino-Libraries/compare/v1.0.1...v1.0.2
+[1.1.0]: https://github.com/devkyato/Custom-Arduino-Libraries/compare/v1.0.3...v1.1.0

@@ -59,9 +59,19 @@ def main() -> None:
             archive.writestr(info, path.read_bytes())
 
     with zipfile.ZipFile(output) as archive:
+        sketches = [name for name in archive.namelist() if name.endswith(".ino")]
+        if len(sketches) != 12:
+            raise RuntimeError(f"expected 12 examples, found {len(sketches)}")
         required = {
             "ArduinoPatterns/CITATION.cff",
+            "ArduinoPatterns/docs/CHALLENGES.md",
+            "ArduinoPatterns/docs/WIRING.md",
             "ArduinoPatterns/docs/API.md",
+            "ArduinoPatterns/examples/CooperativeTasks/CooperativeTasks.ino",
+            "ArduinoPatterns/examples/OneShotSequence/OneShotSequence.ino",
+            "ArduinoPatterns/examples/SensorLevelMeter/SensorLevelMeter.ino",
+            "ArduinoPatterns/examples/SerialPatternSelector/SerialPatternSelector.ino",
+            "ArduinoPatterns/examples/StatusBeacon/StatusBeacon.ino",
             "ArduinoPatterns/library.properties",
             "ArduinoPatterns/src/ArduinoPatterns.h",
         }

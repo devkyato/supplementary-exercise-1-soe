@@ -1,21 +1,24 @@
-# ArduinoPatterns 1.0.3
+# ArduinoPatterns 1.1.0
 
-Patch release: ButtonPause example and bug-template version fix.
+Minor release: more usable examples, guided activities, and safer wiring notes
+without changing the public API.
 
 ## Highlights
 
-- Add a `ButtonPause` example showing non-blocking pause/resume with `stop()` and `start()`.
-- Update the bug-report template placeholder to the current release version.
+- Add five compile-checked examples covering serial pattern selection, status
+  beacons, analog meters, cooperative tasks, and one-shot sequences.
+- Add five matching tutorials, six practice challenges, and a wiring reference.
+- Preserve source compatibility with ArduinoPatterns 1.0.x.
 
 ## Install
 
-Arduino IDE: download `ArduinoPatterns-1.0.3.zip` and choose **Sketch > Include Library > Add .ZIP Library**.
+Arduino IDE: download `ArduinoPatterns-1.1.0.zip` and choose **Sketch > Include Library > Add .ZIP Library**.
 
 PlatformIO:
 
 ```ini
 lib_deps =
-  https://github.com/devkyato/Custom-Arduino-Libraries.git#v1.0.3
+  https://github.com/devkyato/Custom-Arduino-Libraries.git#v1.1.0
 ```
 
 ## Citation
